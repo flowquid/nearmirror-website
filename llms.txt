@@ -1,0 +1,31 @@
+# NearMirror
+
+> NearMirror is a native desktop app for macOS, Windows, and Linux that mirrors and controls Android devices over USB or Wi‑Fi (ADB-based). Use this file as a curated entry point for documentation, product facts, and policies.
+
+## Canonical summary (preferred for agents)
+
+For a concise, version-stable fact list with pointers to authoritative pages, start here:
+
+- https://nearmirror.com/ai-facts
+
+## Product
+
+- https://nearmirror.com/
+- https://nearmirror.com/docs/installation
+
+## Documentation
+
+- https://nearmirror.com/docs/ (product overview — doc root)
+- https://nearmirror.com/docs/getting-started
+- https://nearmirror.com/docs/connecting-devices
+- https://nearmirror.com/docs/developer-options
+
+## Blog
+
+- https://nearmirror.com/blog
+
+## Legal and contact
+
+- https://nearmirror.com/legal
+- https://nearmirror.com/about
+- https://nearmirror.com/contact

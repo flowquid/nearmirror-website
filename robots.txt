@@ -1,0 +1,8 @@
+# NearMirror public site — default policy: allow indexing and research crawlers.
+# To block specific AI or search crawlers, add separate User-agent blocks with Disallow
+# (consult legal/compliance before restricting). Do not duplicate Sitemap lines.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nearmirror.com/sitemap.xml

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunknearmirror_docs=globalThis.webpackChunknearmirror_docs||[]).push([[8947],{6600(r){r.exports=JSON.parse('{"authors":[{"name":"admin","title":"NearMirror","url":"https://nearmirror.com","key":"admin","page":null,"count":8}]}')}}]);

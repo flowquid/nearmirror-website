@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nearmirror.com/blog</id>
+    <title>NearMirror Blog</title>
+    <updated>2026-04-20T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://nearmirror.com/blog"/>
+    <subtitle>NearMirror Blog</subtitle>
+    <icon>https://nearmirror.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Android mirroring for live demos and stakeholder reviews]]></title>
+        <id>https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews</id>
+        <link href="https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews"/>
+        <updated>2026-04-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Run polished Android screen mirroring demos from macOS, Windows, or Linux: USB vs Wi-Fi for latency, window layout, video settings, and backup plans when live.]]></summary>
+        <content type="html"><![CDATA[<p>Product reviews and executive demos reward <strong>predictable</strong> mirroring more than <strong>maximum</strong> bitrate. Your audience cares that the <strong>tap follows the cursor</strong> and that fonts are readable on a projector—not that you squeezed an extra megabit per second from a dying Wi-Fi link.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prefer-usb-for-the-live-critical-path">Prefer USB for the live critical path<a href="https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews#prefer-usb-for-the-live-critical-path" class="hash-link" aria-label="Direct link to Prefer USB for the live critical path" title="Direct link to Prefer USB for the live critical path" translate="no">​</a></h2>
+<p>If the room has questionable Wi-Fi, <strong>USB</strong> is the cheapest insurance policy. Run <strong>dry rehearsal</strong> on the exact cable and port you will use; front-panel ports and long passive extensions are frequent culprits when “it worked at my desk.”</p>
+<p>When wireless is unavoidable, read <a class="" href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls">Wireless debugging pitfalls</a> before you bet the roadmap review on hotel conference Wi-Fi.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="windowing-and-readability">Windowing and readability<a href="https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews#windowing-and-readability" class="hash-link" aria-label="Direct link to Windowing and readability" title="Direct link to Windowing and readability" translate="no">​</a></h2>
+<p>On a projector, <strong>UI density</strong> beats raw pixel count. Use <a class="" href="https://nearmirror.com/docs/window">Window</a> settings (where available) to keep chrome predictable, and consider <strong>slightly lower resolution</strong> with crisp scaling over native res that the room cannot resolve anyway.</p>
+<p>If you present from a laptop <strong>mirrored to HDMI</strong>, remember macOS/Windows display scaling affects how large the NearMirror window <strong>feels</strong> to viewers—test full stack, not just the phone.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="video-tuning-for-motion">Video tuning for motion<a href="https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews#video-tuning-for-motion" class="hash-link" aria-label="Direct link to Video tuning for motion" title="Direct link to Video tuning for motion" translate="no">​</a></h2>
+<p>Fast scrolling demos need <strong>stable frame pacing</strong>. If you see micro-stutters, drop <strong>bitrate</strong> a notch before you chase exotic OS flags—see <a class="" href="https://nearmirror.com/docs/video">Video Settings</a> and <a class="" href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency">Tuning quality and latency</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="have-a-backup-story">Have a backup story<a href="https://nearmirror.com/blog/mirroring-demos-stakeholder-reviews#have-a-backup-story" class="hash-link" aria-label="Direct link to Have a backup story" title="Direct link to Have a backup story" translate="no">​</a></h2>
+<p>Live demos fail for boring reasons: <strong>sleep</strong>, <strong>low battery</strong>, <strong>OS update prompts</strong>. Keep a <strong>15-second screen recording</strong> clip as offline fallback if network mirroring dies mid-slide—but ask policy before recording sensitive screens.</p>
+<p>Stakeholders remember <strong>smooth</strong> more than <strong>4K</strong>. Optimize for their eyes and your nerves, not benchmark bragging rights.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="mirroring" term="mirroring"/>
+        <category label="demos" term="demos"/>
+        <category label="productivity" term="productivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wireless debugging pairing pitfalls that break Android mirroring]]></title>
+        <id>https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls</id>
+        <link href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls"/>
+        <updated>2026-04-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Fix Android 11+ wireless debugging pairing for ADB mirroring: wrong Wi-Fi, DHCP IP changes, phone sleep, VPN split tunnels, and corporate client isolation.]]></summary>
+        <content type="html"><![CDATA[<p>Wireless debugging is convenient until the <strong>pairing port rotates</strong>, the phone <strong>sleeps</strong>, or your laptop quietly joins the <strong>guest SSID</strong>. Most “it worked yesterday” wireless ADB stories trace back to a small set of <strong>network and power state</strong> mistakes—not a broken mirroring app.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="same-wi-fi-really-means-same-l2-domain">Same Wi-Fi really means same L2 domain<a href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls#same-wi-fi-really-means-same-l2-domain" class="hash-link" aria-label="Direct link to Same Wi-Fi really means same L2 domain" title="Direct link to Same Wi-Fi really means same L2 domain" translate="no">​</a></h2>
+<p>Phone and PC must see each other at <strong>LAN</strong> scope. <strong>Guest Wi-Fi</strong>, <strong>captive portals</strong>, and <strong>client isolation</strong> (APs that forbid Wi-Fi-to-Wi-Fi traffic) all look “online” from a browser test yet block ADB pairing traffic.</p>
+<p>If pairing fails instantly at the office, try <strong>USB once</strong> to prove the device is healthy, then ask IT whether <strong>peer-to-peer Wi-Fi</strong> is blocked on your VLAN.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ip-churn-and-sleep">IP churn and sleep<a href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls#ip-churn-and-sleep" class="hash-link" aria-label="Direct link to IP churn and sleep" title="Direct link to IP churn and sleep" translate="no">​</a></h2>
+<p>DHCP leases can change addresses. Some OEMs <strong>aggressively sleep</strong> wireless debugging when the screen is off. For long sessions, <strong>keep the device plugged in</strong>, disable overly strict battery savers for your mirroring session if your OEM allows it, and reconnect after router reboots.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="vpns-and-split-tunnels">VPNs and split tunnels<a href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls#vpns-and-split-tunnels" class="hash-link" aria-label="Direct link to VPNs and split tunnels" title="Direct link to VPNs and split tunnels" translate="no">​</a></h2>
+<p>A full-tunnel VPN on the <strong>desktop</strong> can hairpin what “local network” means. If wireless debugging targets a <strong>RFC1918</strong> address on your LAN, but the VPN sends all traffic elsewhere, pairing packets never arrive. Split-tunnel or pause VPN <strong>only if</strong> your security policy allows it for lab networks.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pairing-codes-and-fat-fingers">Pairing codes and fat fingers<a href="https://nearmirror.com/blog/wireless-debugging-pairing-pitfalls#pairing-codes-and-fat-fingers" class="hash-link" aria-label="Direct link to Pairing codes and fat fingers" title="Direct link to Pairing codes and fat fingers" translate="no">​</a></h2>
+<p>Android shows a <strong>pairing port</strong> and <strong>six-digit code</strong> for a limited time. Typos, stale dialogs, and trying to reuse yesterday’s port are common. When in doubt: <strong>forget pairing</strong>, regenerate in Developer options, and enter the fresh values once—rarely does hammering the old port help.</p>
+<p>Step-by-step device setup lives in <a class="" href="https://nearmirror.com/docs/getting-started">Getting Started</a>; connection patterns are covered in <a class="" href="https://nearmirror.com/docs/connecting-devices">Connecting Devices</a>. For the bigger picture on USB versus Wi-Fi tradeoffs, read <a class="" href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring">USB vs wireless ADB</a>.</p>
+<p>Wireless debugging is a <strong>sharp tool</strong>—respect your network topology and it stays boringly reliable.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="wireless" term="wireless"/>
+        <category label="adb" term="adb"/>
+        <category label="troubleshooting" term="troubleshooting"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Screen recording versus live mirroring on Android]]></title>
+        <id>https://nearmirror.com/blog/screen-recording-vs-live-mirroring</id>
+        <link href="https://nearmirror.com/blog/screen-recording-vs-live-mirroring"/>
+        <updated>2026-04-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[When to record Android mirroring sessions versus watching live: storage, codecs, bug reports, demos, and how NearMirror recording fits next to live mirror windows.]]></summary>
+        <content type="html"><![CDATA[<p><strong>Live mirroring</strong> answers “what is happening right now?” <strong>Recording</strong> answers “can I prove what happened later?” The hardware path overlaps, but the <strong>intent, disk usage, and post-processing</strong> differ—mixing them up leads to giant MP4 files nobody watches, or missing repro clips when QA needed them.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-live-mirroring-is-enough">When live mirroring is enough<a href="https://nearmirror.com/blog/screen-recording-vs-live-mirroring#when-live-mirroring-is-enough" class="hash-link" aria-label="Direct link to When live mirroring is enough" title="Direct link to When live mirroring is enough" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Interactive debugging</strong>: stepping through UI, reproducing taps, watching Logcat while you drive the app.</li>
+<li class=""><strong>Pair programming</strong> where a partner watches in real time and does not need a file artifact.</li>
+</ul>
+<p>Keep <a class="" href="https://nearmirror.com/docs/video">Video</a> tuned for <strong>responsiveness</strong> over cinematic bitrate if nobody will archive the session.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-recording-pays-off">When recording pays off<a href="https://nearmirror.com/blog/screen-recording-vs-live-mirroring#when-recording-pays-off" class="hash-link" aria-label="Direct link to When recording pays off" title="Direct link to When recording pays off" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Bug reports</strong> where stakeholders want a timestamped clip with audio.</li>
+<li class=""><strong>Compliance or training</strong> where a <strong>durable artifact</strong> must exist after the session.</li>
+<li class=""><strong>Flaky repros</strong> that only appear once every dozen attempts—rolling capture beats human reflexes.</li>
+</ul>
+<p>NearMirror’s recording options are documented under <a class="" href="https://nearmirror.com/docs/recording">Recording</a>. Plan <strong>disk space</strong> on the desktop: high-resolution, long captures add up fast on laptops with small SSDs.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="audio-and-privacy">Audio and privacy<a href="https://nearmirror.com/blog/screen-recording-vs-live-mirroring#audio-and-privacy" class="hash-link" aria-label="Direct link to Audio and privacy" title="Direct link to Audio and privacy" translate="no">​</a></h2>
+<p>Recording <strong>device audio</strong> alongside video is powerful for game or media bugs, but remember consent norms for <strong>calls</strong> or <strong>meetings</strong> in your jurisdiction and company policy. When in doubt, record <strong>silent</strong> repros or use a test account without real customer data.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="recording" term="recording"/>
+        <category label="mirroring" term="mirroring"/>
+        <category label="workflow" term="workflow"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Local-first privacy: what happens when you mirror Android to a desktop]]></title>
+        <id>https://nearmirror.com/blog/local-first-privacy-and-android-mirroring</id>
+        <link href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring"/>
+        <updated>2026-04-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Local-first Android screen mirroring explained: what stays on USB or LAN, realistic threat model, logcat and clipboard risks, and how that differs from cloud remote desktop.]]></summary>
+        <content type="html"><![CDATA[<p>People rightly ask where their <strong>screen pixels</strong>, <strong>audio</strong>, and <strong>files</strong> go when they mirror. The short answer for NearMirror: the session is <strong>between your computer and your phone</strong> over USB or local network—not through a cloud “view your screen” relay.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-local-matters">Why “local” matters<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#why-local-matters" class="hash-link" aria-label="Direct link to Why “local” matters" title="Direct link to Why “local” matters" translate="no">​</a></h2>
+<p>When mirroring uses local USB or LAN paths, your data stays inside the environment you control: your desk, your router, your cables. That is different from remote-support tools that intentionally route video through vendor servers.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-still-leaves-the-device">What still leaves the device<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#what-still-leaves-the-device" class="hash-link" aria-label="Direct link to What still leaves the device" title="Direct link to What still leaves the device" translate="no">​</a></h2>
+<p>Anything you <strong>choose</strong> to upload—cloud drives, email attachments, chat uploads—behaves the same as without mirroring. Mirroring does not replace normal caution about what apps send outbound.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions-and-trust">Permissions and trust<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#permissions-and-trust" class="hash-link" aria-label="Direct link to Permissions and trust" title="Direct link to Permissions and trust" translate="no">​</a></h2>
+<p>ADB-level access is powerful. Only <strong>authorize debugging</strong> on machines you trust, and turn USB debugging off on phones you lend out if you are not comfortable with that trust boundary.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="logs-and-diagnostics">Logs and diagnostics<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#logs-and-diagnostics" class="hash-link" aria-label="Direct link to Logs and diagnostics" title="Direct link to Logs and diagnostics" translate="no">​</a></h2>
+<p>If you open a <strong>Logcat</strong> window while debugging an app, you are looking at system and app logs—not a replacement for a privacy policy, but a reminder that verbose logging can include package names, URLs, or tokens if apps log poorly. Treat shared logs like shared crash dumps. NearMirror’s <a class="" href="https://nearmirror.com/docs/logcat">Logcat</a> doc explains how the viewer fits into the app; scrub before you paste into public tickets.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-plain-language-threat-model">A plain-language threat model<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#a-plain-language-threat-model" class="hash-link" aria-label="Direct link to A plain-language threat model" title="Direct link to A plain-language threat model" translate="no">​</a></h2>
+<p><strong>Local mirroring</strong> means pixels and audio are not intentionally routed through a vendor’s screen-recording cloud. It does <strong>not</strong> mean your laptop is magically safe:</p>
+<ul>
+<li class="">A <strong>stolen or unlocked desktop</strong> can read whatever is on disk—including recordings you made while mirroring.</li>
+<li class=""><strong>Malware on the PC</strong> has the same power as malware always had: keyloggers, clipboard sniffers, and screen capture.</li>
+<li class=""><strong>Shoulder surfing</strong> still works; mirroring can make a 27-inch monitor easier to read from across a room.</li>
+</ul>
+<p>ADB trust is bilateral: the phone trusts <strong>this</strong> debugging host, and you should only grant that on machines you administer.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-mirroring-does-not-change">What mirroring does not change<a href="https://nearmirror.com/blog/local-first-privacy-and-android-mirroring#what-mirroring-does-not-change" class="hash-link" aria-label="Direct link to What mirroring does not change" title="Direct link to What mirroring does not change" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Clipboard and drag-and-drop</strong> paths follow normal OS rules—sensitive tokens in the clipboard are still sensitive.</li>
+<li class=""><strong>Apps that phone home</strong> keep doing so; mirroring is not a network firewall for your phone’s outbound traffic.</li>
+<li class=""><strong>Backups and sync</strong> (photos, chat history) behave as configured regardless of mirroring.</li>
+</ul>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="privacy" term="privacy"/>
+        <category label="security" term="security"/>
+        <category label="mirroring" term="mirroring"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fixing common ADB connection errors before they ruin your mirror session]]></title>
+        <id>https://nearmirror.com/blog/fixing-common-adb-connection-errors</id>
+        <link href="https://nearmirror.com/blog/fixing-common-adb-connection-errors"/>
+        <updated>2026-04-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Resolve ADB issues for Android mirroring: unauthorized devices, offline state, bad cables, USB transfer modes, Windows drivers, Linux udev rules, and office Wi-Fi blocks.]]></summary>
+        <content type="html"><![CDATA[<p>If mirroring fails at the connection step, the root cause is often one of a handful of ADB-adjacent issues. This post collects the fastest checks we see in the wild.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-unauthorized-or-no-rsa-prompt">“Device unauthorized” or no RSA prompt<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#device-unauthorized-or-no-rsa-prompt" class="hash-link" aria-label="Direct link to “Device unauthorized” or no RSA prompt" title="Direct link to “Device unauthorized” or no RSA prompt" translate="no">​</a></h2>
+<p>Unplug and replug, revoke old keys if you have been swapping machines: <strong>Developer options → Revoke USB debugging authorizations</strong>, then reconnect and accept the prompt on the phone <strong>while it is unlocked</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-never-appears-in-the-desktop-app">Device never appears in the desktop app<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#device-never-appears-in-the-desktop-app" class="hash-link" aria-label="Direct link to Device never appears in the desktop app" title="Direct link to Device never appears in the desktop app" translate="no">​</a></h2>
+<ol>
+<li class="">Confirm <strong>USB debugging</strong> is on—see <a class="" href="https://nearmirror.com/docs/developer-options">Developer Options</a>.</li>
+<li class="">Try another <strong>cable</strong> (data-capable, ideally OEM).</li>
+<li class="">Try another <strong>USB port</strong>; some front-panel ports are underpowered or flaky.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="wireless-offline-or-endless-pairing">Wireless: “offline” or endless pairing<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#wireless-offline-or-endless-pairing" class="hash-link" aria-label="Direct link to Wireless: “offline” or endless pairing" title="Direct link to Wireless: “offline” or endless pairing" translate="no">​</a></h2>
+<p>Double-check <strong>same Wi‑Fi</strong> as the PC, correct <strong>pairing port/code</strong> for wireless debugging, and that the phone is not switching networks due to weak signal. Firewalls on corporate VLANs sometimes block ADB ports between Wi‑Fi clients; USB is the quickest isolation test.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adb-devices-shows-nothing-if-you-use-cli"><code>adb devices</code> shows nothing (if you use CLI)<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#adb-devices-shows-nothing-if-you-use-cli" class="hash-link" aria-label="Direct link to adb-devices-shows-nothing-if-you-use-cli" title="Direct link to adb-devices-shows-nothing-if-you-use-cli" translate="no">​</a></h2>
+<p>Install or repair <strong>USB drivers</strong> on Windows; on macOS/Linux, rule out bad cables first. On Linux, <strong>udev rules</strong> for your vendor ID may be required for non-root access.</p>
+<p>NearMirror’s <a class="" href="https://nearmirror.com/docs/getting-started">Getting Started</a> path is designed so you do not need the CLI, but the same physical and authorization issues apply to every mirroring stack built on ADB.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-offline-or-flaky-state-changes"><code>device offline</code> or flaky state changes<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#device-offline-or-flaky-state-changes" class="hash-link" aria-label="Direct link to device-offline-or-flaky-state-changes" title="Direct link to device-offline-or-flaky-state-changes" translate="no">​</a></h2>
+<p><code>offline</code> usually means the host can see the gadget layer but <code>adbd</code> is not conversing cleanly—bad cable/port, USB hub in the path, or the device dropped authorization mid-session. Remove <strong>hubs</strong> temporarily, try another port, unlock the phone, and watch for the authorize prompt. If you toggled <strong>File transfer / MTP</strong> recently, reconnect once; some stacks are picky until the USB mode settles.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="usb-mode-mtp-ptp-charge-only">USB mode (MTP, PTP, “charge only”)<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#usb-mode-mtp-ptp-charge-only" class="hash-link" aria-label="Direct link to USB mode (MTP, PTP, “charge only”)" title="Direct link to USB mode (MTP, PTP, “charge only”)" translate="no">​</a></h2>
+<p>Android’s USB notification can silently land on <strong>charge only</strong> after an update. Pick <strong>File transfer / Android Auto</strong> or the mode your OEM labels for data—exact names vary—then replug. This is not “magic,” but it eliminates a boring class of “worked yesterday” reports.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="windows-oem-and-google-drivers">Windows: OEM and Google drivers<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#windows-oem-and-google-drivers" class="hash-link" aria-label="Direct link to Windows: OEM and Google drivers" title="Direct link to Windows: OEM and Google drivers" translate="no">​</a></h2>
+<p>Generic Windows drivers cover many phones, but not all. If the device never enumerates, install the <strong>OEM USB driver</strong> package for Samsung, Google, Xiaomi, etc., or the <strong>Google USB Driver</strong> for Pixel-class devices. Device Manager “unknown device” entries are your hint before you blame mirroring software.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="linux-udev-rule-pattern">Linux: udev rule pattern<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#linux-udev-rule-pattern" class="hash-link" aria-label="Direct link to Linux: udev rule pattern" title="Direct link to Linux: udev rule pattern" translate="no">​</a></h2>
+<p>Non-root <code>adb</code> needs permission on the USB node. Rules are vendor-specific; you will see an <strong>18d1</strong> (Google) style id or your phone vendor’s USB id in <code>lsusb</code>. A typical pattern (replace <code>0xXXXX</code> with your vendor id from <code>lsusb -v</code>) looks like:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", MODE="0666", GROUP="plugdev"</span><br></div></code></pre></div></div>
+<p>Reload rules and replug. Distro docs differ slightly (<code>udevadm control --reload-rules &amp;&amp; udevadm trigger</code>).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="corporate-wifi-and-vlans">Corporate Wi‑Fi and VLANs<a href="https://nearmirror.com/blog/fixing-common-adb-connection-errors#corporate-wifi-and-vlans" class="hash-link" aria-label="Direct link to Corporate Wi‑Fi and VLANs" title="Direct link to Corporate Wi‑Fi and VLANs" translate="no">​</a></h2>
+<p>Even when the phone and laptop are “on Wi‑Fi,” <strong>client isolation</strong> or <strong>inter-VLAN firewall rules</strong> can block the TCP ports wireless debugging uses. If USB works instantly but wireless never completes pairing, grab IT with “peer-to-peer blocked on SSID X” language—or use USB on that network.</p>
+<p>For device-specific flows, keep <a class="" href="https://nearmirror.com/docs/connecting-devices">Connecting Devices</a> open next to this checklist.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="adb" term="adb"/>
+        <category label="troubleshooting" term="troubleshooting"/>
+        <category label="developer-options" term="developer-options"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tuning Android mirroring quality and latency]]></title>
+        <id>https://nearmirror.com/blog/tuning-mirroring-quality-and-latency</id>
+        <link href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency"/>
+        <updated>2026-04-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Improve Android mirroring quality and latency: bitrate vs resolution, Wi-Fi and cable checks, video settings, phone thermals, and an ordered troubleshooting checklist.]]></summary>
+        <content type="html"><![CDATA[<p>Mirroring always trades <strong>quality</strong>, <strong>latency</strong>, and <strong>CPU/network load</strong>. Small adjustments on both the desktop and the phone side often matter more than chasing the highest resolution slider.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="video-side">Video side<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#video-side" class="hash-link" aria-label="Direct link to Video side" title="Direct link to Video side" translate="no">​</a></h2>
+<p>Higher <strong>resolution</strong> and <strong>bitrate</strong> look sharper but cost more bandwidth—especially over Wi‑Fi—and can increase decode and render time on the desktop. If motion feels mushy or input lags behind the cursor, try stepping down one notch and compare.</p>
+<p>NearMirror exposes these controls in the docs under <a class="" href="https://nearmirror.com/docs/video">Video Settings</a>. Use them when you change networks or when you switch from a flagship phone to a mid-range device.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="network-side-wireless">Network side (wireless)<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#network-side-wireless" class="hash-link" aria-label="Direct link to Network side (wireless)" title="Direct link to Network side (wireless)" translate="no">​</a></h2>
+<ul>
+<li class="">Prefer <strong>5 GHz</strong> Wi‑Fi when available; 2.4 GHz is more crowded.</li>
+<li class="">Avoid VPN tunnels on the same machine if they force traffic through remote exits you do not need for local mirroring.</li>
+<li class="">Reduce other heavy LAN use (large LAN backups, etc.) during sensitive demos.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-side">Device side<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#device-side" class="hash-link" aria-label="Direct link to Device side" title="Direct link to Device side" translate="no">​</a></h2>
+<p>Thermal throttling and background sync can steal frames. For important sessions, close heavy games temporarily, pause large uploads, and keep the phone <strong>cool</strong>—metal desks and direct sunlight heat phones faster than people expect.</p>
+<p>Latency is never “zero,” but a stable, slightly lower bitrate stream usually <em>feels</em> faster than a maxed-out setting that stutters.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bitrate-vs-resolution-plain-language">Bitrate vs resolution (plain language)<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#bitrate-vs-resolution-plain-language" class="hash-link" aria-label="Direct link to Bitrate vs resolution (plain language)" title="Direct link to Bitrate vs resolution (plain language)" translate="no">​</a></h2>
+<p><strong>Resolution</strong> is how many pixels each frame contains. <strong>Bitrate</strong> is how much data per second you allow the encoder to spend describing motion and detail. Raising both at once on a weak link is the most common recipe for hitching: the encoder or the network cannot keep up, so frames arrive late and the desktop has nothing new to draw.</p>
+<p>If picture looks <strong>blocky</strong> but motion is smooth, you are often bitrate-starved—try a modest bump in bitrate before jumping resolution. If motion <strong>stutters</strong>, try lowering one step in resolution <em>or</em> bitrate first, not both at once, so you can see which knob mattered.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ordered-checklist-when-something-feels-off">Ordered checklist when something feels “off”<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#ordered-checklist-when-something-feels-off" class="hash-link" aria-label="Direct link to Ordered checklist when something feels “off”" title="Direct link to Ordered checklist when something feels “off”" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>Network path</strong> (wireless): same SSID/subnet, 5 GHz if you can, move closer to the AP, pause huge LAN transfers.</li>
+<li class=""><strong>Cable path</strong> (USB): swap cable/port; charge-only cables masquerade as “fine” until video starts.</li>
+<li class=""><strong>Video settings</strong>: open <a class="" href="https://nearmirror.com/docs/video">Video Settings</a> and reduce one notch; re-test before chasing exotic OS tweaks.</li>
+<li class=""><strong>Phone load</strong>: close heavy background apps; let the device cool if it has been thermal-throttling.</li>
+<li class=""><strong>Desktop load</strong>: other GPU-heavy apps can contend; a quick comparison with browsers/games paused is a fair test.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="if-it-is-stuttering-try-this-first">If it is stuttering, try this first<a href="https://nearmirror.com/blog/tuning-mirroring-quality-and-latency#if-it-is-stuttering-try-this-first" class="hash-link" aria-label="Direct link to If it is stuttering, try this first" title="Direct link to If it is stuttering, try this first" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Wireless</strong>: drop bitrate one step <em>or</em> switch band/AP; do not immediately blame the mirroring app.</li>
+<li class=""><strong>USB</strong>: verify a <strong>data</strong> cable and a <strong>rear</strong> motherboard port on towers before touching software sliders.</li>
+</ul>
+<p>Small, reversible changes beat random max settings—and they make support or bug reports easier because you can say exactly which knob helped.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="mirroring" term="mirroring"/>
+        <category label="performance" term="performance"/>
+        <category label="video" term="video"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[USB vs wireless ADB for mirroring—which should you use?]]></title>
+        <id>https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring</id>
+        <link href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring"/>
+        <updated>2026-04-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Compare USB and wireless ADB for Android mirroring: latency, setup, corporate Wi-Fi, Android 11+ pairing, guest-network isolation, and practical decision tips.]]></summary>
+        <content type="html"><![CDATA[<p>NearMirror supports <strong>USB</strong> and <strong>wireless</strong> connections. Both can work well; the right choice depends on your desk layout, router, and how sensitive you are to latency.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-usb-wins">When USB wins<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#when-usb-wins" class="hash-link" aria-label="Direct link to When USB wins" title="Direct link to When USB wins" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Stability</strong>: USB avoids Wi‑Fi contention, neighbor networks, and flaky access points.</li>
+<li class=""><strong>Lower jitter</strong>: For typing, UI testing, or demos where micro-stutters are distracting, a good data cable often feels tighter than marginal Wi‑Fi.</li>
+<li class=""><strong>First-time setup</strong>: Many workflows still expect an initial wired path before wireless pairing is available.</li>
+</ul>
+<p>Use a <strong>data</strong> cable—charge-only leads are a classic source of “device never appears.”</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-wireless-wins">When wireless wins<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#when-wireless-wins" class="hash-link" aria-label="Direct link to When wireless wins" title="Direct link to When wireless wins" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Mobility</strong>: You can leave the phone on a stand across the room.</li>
+<li class=""><strong>Fewer cable swaps</strong>: Great if you mirror several devices through the day.</li>
+<li class=""><strong>Cleaner desk</strong>: No dongle spaghetti if your machine has limited ports.</li>
+</ul>
+<p>Wireless debugging (Android 11+) or LAN-based pairing both ultimately run ADB over TCP. That means <strong>same subnet</strong> and <strong>solid Wi‑Fi</strong> matter more than raw ISP speed.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-rule-of-thumb">Practical rule of thumb<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#practical-rule-of-thumb" class="hash-link" aria-label="Direct link to Practical rule of thumb" title="Direct link to Practical rule of thumb" translate="no">​</a></h2>
+<p>Start on <strong>USB</strong> until everything is authorized and stable, then try <strong>wireless</strong> if you want freedom of movement. If wireless feels laggy, move closer to the access point or fall back to USB for sessions where responsiveness is critical.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="at-a-glance-usb-vs-wifi">At-a-glance: USB vs Wi‑Fi<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#at-a-glance-usb-vs-wifi" class="hash-link" aria-label="Direct link to At-a-glance: USB vs Wi‑Fi" title="Direct link to At-a-glance: USB vs Wi‑Fi" translate="no">​</a></h2>
+<table><thead><tr><th></th><th>USB</th><th>Wi‑Fi / wireless ADB</th></tr></thead><tbody><tr><td><strong>Typical latency</strong></td><td>Often lowest and most consistent</td><td>Depends on AP, band, and airtime contention</td></tr><tr><td><strong>Setup friction</strong></td><td>Cable + one-time authorize prompt</td><td>Pairing code/port (Android 11+) or prior USB prep on some flows</td></tr><tr><td><strong>Corporate / locked-down LANs</strong></td><td>Usually passes if USB is allowed</td><td>Often blocked by client isolation or ACLs between Wi‑Fi peers</td></tr><tr><td><strong>Best for</strong></td><td>QA, demos, long sessions</td><td>Short sessions, multiple devices, minimal cable clutter</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="android-11-wireless-debugging-vs-classic-adb-tcpip">Android 11+ wireless debugging vs classic <code>adb tcpip</code><a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#android-11-wireless-debugging-vs-classic-adb-tcpip" class="hash-link" aria-label="Direct link to android-11-wireless-debugging-vs-classic-adb-tcpip" title="Direct link to android-11-wireless-debugging-vs-classic-adb-tcpip" translate="no">​</a></h2>
+<p><strong>Wireless debugging</strong> in Developer options (Android 11 and later) gives you a pairing workflow and a port scoped to debugging—what most users should use today. Older <strong>USB-then-<code>adb tcpip</code></strong> style workflows still float around in forum posts; they can work, but they assume you already had a working USB session and understood which IP/port to target. If you are new to mirroring, prefer the built-in wireless debugging UI and keep phone and PC on the <strong>same subnet</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="guest-wifi-and-ap-isolation">Guest Wi‑Fi and AP isolation<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#guest-wifi-and-ap-isolation" class="hash-link" aria-label="Direct link to Guest Wi‑Fi and AP isolation" title="Direct link to Guest Wi‑Fi and AP isolation" translate="no">​</a></h2>
+<p>Many routers offer a <strong>guest</strong> SSID that blocks devices from seeing each other. That is great for untrusted visitors and terrible for wireless ADB: your PC and phone may both be “online” yet unable to open the debugging port. Use your <strong>main</strong> LAN (or a trusted lab VLAN that allows peer discovery) for wireless mirroring.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tiny-decision-tree">Tiny decision tree<a href="https://nearmirror.com/blog/usb-vs-wireless-adb-for-mirroring#tiny-decision-tree" class="hash-link" aria-label="Direct link to Tiny decision tree" title="Direct link to Tiny decision tree" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Automating UI tests all afternoon?</strong> Prefer USB—or rock-solid 5 GHz with few neighbors.</li>
+<li class=""><strong>Watching a build on the couch?</strong> Wireless is fine if stutters do not matter.</li>
+<li class=""><strong>Office Wi‑Fi mystery failures?</strong> USB proves whether the phone and app are healthy before you fight IT policies.</li>
+</ul>
+<p>See <a class="" href="https://nearmirror.com/docs/connecting-devices">Connecting Devices</a> for NearMirror-specific steps.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="adb" term="adb"/>
+        <category label="wireless" term="wireless"/>
+        <category label="usb" term="usb"/>
+        <category label="networking" term="networking"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is ADB, and how does it relate to screen mirroring?]]></title>
+        <id>https://nearmirror.com/blog/what-is-adb-and-screen-mirroring</id>
+        <link href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring"/>
+        <updated>2026-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how ADB relates to Android screen mirroring on macOS, Windows, and Linux—USB debugging, host authorization, wireless ADB, and when CLI checks help.]]></summary>
+        <content type="html"><![CDATA[<p>Most desktop Android mirroring tools—including NearMirror—lean on <strong>ADB</strong> (Android Debug Bridge) under the hood. You do not need to memorize commands to use mirroring day to day, but understanding ADB helps when something fails to connect or when you read logs and docs.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adb-in-one-sentence">ADB in one sentence<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#adb-in-one-sentence" class="hash-link" aria-label="Direct link to ADB in one sentence" title="Direct link to ADB in one sentence" translate="no">​</a></h2>
+<p>ADB is a small <strong>client–server protocol</strong> that lets a trusted computer talk to an Android device over USB or TCP (for example, wireless debugging on the same LAN). It was built for developers: install apps, run shells, forward ports, capture logs, and stream screen data when the right APIs are used.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-mirroring-uses-it">Why mirroring uses it<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#why-mirroring-uses-it" class="hash-link" aria-label="Direct link to Why mirroring uses it" title="Direct link to Why mirroring uses it" translate="no">​</a></h2>
+<p>Screen mirroring is not a single “HDMI over Wi‑Fi” standard on every phone. Apps that mirror without root typically use <strong>debugging-oriented capture and control paths</strong> that are exposed when USB debugging is enabled and the desktop is authorized. That is the same trust model ADB uses.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-should-remember">What you should remember<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#what-you-should-remember" class="hash-link" aria-label="Direct link to What you should remember" title="Direct link to What you should remember" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>USB debugging</strong> is the gate: without it, the desktop cannot establish the channel most mirroring stacks expect.</li>
+<li class=""><strong>Authorization</strong> matters: when Android shows “Allow USB debugging?”, you are pairing trust between that PC and the device.</li>
+<li class=""><strong>Wireless ADB</strong> (Android 11+) reuses the same idea over TCP after pairing—handy when cables are awkward, but your network quality still affects latency.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="host-vs-device-who-runs-what">Host vs device: who runs what<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#host-vs-device-who-runs-what" class="hash-link" aria-label="Direct link to Host vs device: who runs what" title="Direct link to Host vs device: who runs what" translate="no">​</a></h2>
+<p>On the <strong>device</strong>, Android runs <code>adbd</code>, the ADB daemon. On the <strong>host</strong> (your Mac, PC, or Linux box), a client speaks the ADB wire protocol over USB or a TCP socket. When you authorize USB debugging, you are explicitly allowing that host’s key to talk to <code>adbd</code>. Mirroring tools use that same trusted channel; they are not bypassing the OS—they are using developer-facing plumbing you have turned on.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adb-for-shell-vs-adb-as-transport">“ADB for shell” vs “ADB as transport”<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#adb-for-shell-vs-adb-as-transport" class="hash-link" aria-label="Direct link to “ADB for shell” vs “ADB as transport”" title="Direct link to “ADB for shell” vs “ADB as transport”" translate="no">​</a></h2>
+<p>Many tutorials show <code>adb shell</code> or <code>adb install</code>. That is the <strong>interactive developer</strong> face of ADB. Mirroring stacks use ADB (or the same class of privileged connection) as a <strong>transport and control plane</strong>: start sessions, forward sockets, and coordinate capture—not something you need to type by hand. When docs say “ADB must be working,” they usually mean “the device shows up as authorized and stable,” not “you should live in a terminal.”</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-the-cli-is-still-useful">When the CLI is still useful<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#when-the-cli-is-still-useful" class="hash-link" aria-label="Direct link to When the CLI is still useful" title="Direct link to When the CLI is still useful" translate="no">​</a></h2>
+<p>You do not need the command line for NearMirror’s happy path. It can still help for <strong>narrowing failures</strong>:</p>
+<ul>
+<li class="">Does the device appear in <code>adb devices</code> at all? If not, you likely have cable, port, driver, or authorization issues—not an app-level bug.</li>
+<li class="">Does the state flip between <code>device</code> and <code>unauthorized</code>? That is almost always the RSA prompt or revoked keys.</li>
+</ul>
+<p>If you have never enabled debugging before, follow <a class="" href="https://nearmirror.com/docs/developer-options">Enabling Developer Options &amp; USB Debugging</a> first; guessing at <code>adb</code> flags without that foundation rarely saves time.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-glossary">Quick glossary<a href="https://nearmirror.com/blog/what-is-adb-and-screen-mirroring#quick-glossary" class="hash-link" aria-label="Direct link to Quick glossary" title="Direct link to Quick glossary" translate="no">​</a></h2>
+<table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>RSA fingerprint</strong></td><td>Host identity shown when Android asks to allow USB debugging; ties trust to a specific machine key.</td></tr><tr><td><strong>TCP / wireless debugging</strong></td><td>Same ADB protocol, but the socket runs over Wi‑Fi/LAN after pairing (Android 11+ wireless debugging UI, or classic <code>adb tcpip</code> flows on some setups).</td></tr><tr><td><strong><code>adbd</code></strong></td><td>Daemon on the phone that answers ADB clients when debugging is enabled.</td></tr></tbody></table>
+<p>If you are setting up NearMirror for the first time, start with <a class="" href="https://nearmirror.com/docs/installation">Installation</a> and <a class="" href="https://nearmirror.com/docs/getting-started">Getting Started</a>; the concepts above are exactly what those guides walk you through.</p>]]></content>
+        <author>
+            <name>admin</name>
+            <uri>https://nearmirror.com</uri>
+        </author>
+        <category label="adb" term="adb"/>
+        <category label="android" term="android"/>
+        <category label="fundamentals" term="fundamentals"/>
+    </entry>
+</feed>
